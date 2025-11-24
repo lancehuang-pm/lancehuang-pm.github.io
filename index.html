@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jack & Kensey's Wedding</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              script: ['"Great Vibes"', 'cursive'],
+              sans: ['"Noto Sans TC"', 'Helvetica', 'Arial', 'sans-serif'],
+            },
+            colors: {
+              'wedding-rose': '#e6b8b8',
+              'wedding-gold': '#d4af37',
+              'wedding-cream': '#fcfbf9',
+              'wedding-dark': '#2c2c2c',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #fcfbf9; }
+      ::-webkit-scrollbar-thumb { background: #e6b8b8; border-radius: 4px; }
+      
+      /* Utility for parallax background */
+      .parallax-bg {
+        background-image: url('https://picsum.photos/1920/1080?grayscale&blur=2');
+      }
+    </style>
+</head>
+<body class="bg-wedding-cream text-wedding-dark antialiased font-sans">
+
+    <!-- HEADER -->
+    <header class="relative w-full h-[85vh] overflow-hidden flex items-center justify-center text-white">
+        <div class="absolute inset-0 bg-cover bg-center z-0 transform scale-105 parallax-bg">
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 animate-fade-in-up">
+            <div class="mb-6 text-wedding-rose animate-pulse flex justify-center">
+                <span class="text-xl tracking-[0.3em] uppercase">#JKNOTJOKING</span>
+            </div>
+            <h1 class="text-7xl md:text-9xl font-script mb-6 drop-shadow-lg text-white">
+                Jack & Kensey's Wedding
+            </h1>
+            <p class="text-lg md:text-xl font-sans font-light tracking-[0.2em] uppercase mt-6 border-t border-b border-white/30 py-4 inline-block text-stone-200">
+                2026 Feb 07<span class="mx-4 text-wedding-rose">•</span>Taipei
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <!-- WEDDING INFO -->
+        <section class="py-20 px-4 bg-wedding-cream">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-stone-800 mb-2 tracking-wide">You Are Invited</h2>
+                    <p class="text-stone-400 text-lg mb-4 tracking-wider">誠摯邀請</p>
+                    <p class="text-stone-500 max-w-lg mx-auto">
+                        在這個特別的日子裡，我們希望能與您分享這份喜悅。<br/>
+                        Please join us to celebrate our special day.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+                    <!-- Date -->
+                    <div class="flex flex-col items-center p-8 bg-white rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow duration-300 h-full">
+                        <div class="text-wedding-rose mb-4 p-3 bg-rose-50 rounded-full"><i data-lucide="calendar" class="w-7 h-7"></i></div>
+                        <h3 class="text-lg font-bold text-stone-800 mb-4 uppercase tracking-widest">日期 / Date</h3>
+                        <div class="text-stone-600 font-medium text-lg text-center whitespace-pre-line leading-relaxed">2026 Feb 07 Sat.</div>
+                    </div>
+                    <!-- Time -->
+                    <div class="flex flex-col items-center p-8 bg-white rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow duration-300 h-full">
+                        <div class="text-wedding-rose mb-4 p-3 bg-rose-50 rounded-full"><i data-lucide="clock" class="w-7 h-7"></i></div>
+                        <h3 class="text-lg font-bold text-stone-800 mb-4 uppercase tracking-widest">時間 / Time</h3>
+                        <div class="text-stone-600 font-medium text-lg text-center whitespace-pre-line leading-relaxed">11:30 迎賓酒會 Doors Open<br>12:00 午宴開始 Reception</div>
+                    </div>
+                    <!-- Location -->
+                    <div class="flex flex-col items-center p-8 bg-white rounded-xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow duration-300 h-full">
+                        <div class="text-wedding-rose mb-4 p-3 bg-rose-50 rounded-full"><i data-lucide="map-pin" class="w-7 h-7"></i></div>
+                        <h3 class="text-lg font-bold text-stone-800 mb-4 uppercase tracking-widest">地點 / Location</h3>
+                        <div class="text-stone-600 font-medium text-lg text-center whitespace-pre-line leading-relaxed">台北漢來大飯店 3F 鉑金A廳<br>Grand Hilai Taipei 3F<br>Platinum Ballroom A</div>
+                        <div class="text-stone-400 text-sm mt-4 text-center whitespace-pre-line border-t border-stone-100 pt-4 w-full">台北市南港區經貿一路168號<br>No. 168, Jingmao 1st Rd, Nangang Dist, Taipei</div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                   <a href="https://www.google.com/maps/search/?api=1&query=Grand+Hilai+Taipei" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3 bg-stone-800 text-white rounded-full hover:bg-stone-700 transition-colors uppercase tracking-widest text-xs md:text-sm font-bold">
+                    Google Maps Navigation / 地圖導航
+                   </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TABLE SEARCH -->
+        <section class="py-20 px-4 bg-wedding-cream" id="seating">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold text-stone-800 mb-2 tracking-wide">Find Your Seat</h2>
+                    <p class="text-stone-400 text-lg mb-2 tracking-wider">座位查詢</p>
+                    <p class="text-stone-500 text-sm">Please enter your name to find your table / 請輸入您的姓名</p>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-8">
+                    <!-- Left Panel: Search Input -->
+                    <div class="flex-1">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-stone-100 h-full min-h-[300px]" id="search-panel">
+                            <!-- Search Mode -->
+                            <div id="search-mode">
+                                <div class="relative mb-6">
+                                    <input type="text" id="guest-search-input" placeholder="Name (e.g., 林靜)" class="w-full pl-12 pr-4 py-4 bg-stone-50 border border-stone-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-wedding-rose/50 transition-all">
+                                    <div class="absolute left-4 top-1/2 transform -translate-y-1/2 text-stone-400">
+                                        <i data-lucide="search" class="w-5 h-5"></i>
+                                    </div>
+                                </div>
+                                <ul id="search-results" class="space-y-2"></ul>
+                                <div id="no-results" class="hidden text-center py-8 text-stone-400 text-sm">No guest found / 查無此賓客</div>
+                                <div id="empty-state" class="text-center py-12 text-stone-300">
+                                    <div class="flex justify-center mb-2 opacity-20"><i data-lucide="search" class="w-12 h-12"></i></div>
+                                    <p class="text-sm">Please enter name above / 請在上方輸入姓名</p>
+                                </div>
+                            </div>
+
+                            <!-- Result Mode (Hidden by default) -->
+                            <div id="result-mode" class="hidden text-center py-8 animate-fade-in">
+                                <div id="result-table-circle" class="w-20 h-20 bg-wedding-rose text-white rounded-full flex items-center justify-center mx-auto mb-4 text-3xl font-bold shadow-lg">
+                                    <!-- Table Num -->
+                                </div>
+                                <h3 class="text-2xl font-bold text-stone-800 mb-1" id="result-table-title">Table X</h3>
+                                <p class="text-stone-400 mb-2" id="result-table-subtitle">第 X 桌</p>
+                                <p class="text-lg text-stone-600 mb-8" id="result-guest-name">Welcome, Name</p>
+                                <button id="reset-search-btn" class="text-sm text-stone-400 hover:text-stone-600 underline underline-offset-4">
+                                    Search Again / 查詢其他賓客
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Panel: Map -->
+                    <div class="flex-1">
+                        <div class="bg-stone-100 p-4 md:p-8 rounded-xl border border-stone-200 overflow-hidden relative flex flex-col min-h-[500px]">
+                            <!-- Stage -->
+                            <div class="w-2/3 mx-auto h-8 md:h-10 bg-wedding-dark/10 rounded-b-full mb-8 flex items-center justify-center shadow-sm">
+                                <span class="text-stone-500 text-xs tracking-[0.3em] font-bold ml-1">STAGE 舞台</span>
+                            </div>
+
+                            <!-- Main Table -->
+                            <div class="flex justify-center mb-10">
+                                <div class="relative w-20 h-20 rounded-full bg-wedding-rose/10 border-2 border-wedding-rose flex items-center justify-center text-center shadow-sm">
+                                    <span class="text-sm font-bold text-wedding-rose leading-tight">主桌<br/><span class="text-[10px] opacity-80 font-normal">Main</span></span>
+                                    <div class="absolute inset-0 rounded-full border-[2px] border-dotted border-wedding-rose scale-110 pointer-events-none opacity-30"></div>
+                                </div>
+                            </div>
+
+                            <!-- Map Grid -->
+                            <div class="flex-1 flex justify-between relative px-0 md:px-4 gap-4 md:gap-12 max-w-5xl mx-auto w-full" id="seating-grid">
+                                <!-- Left Side (1-10) -->
+                                <div class="flex-1 flex justify-center gap-4 md:gap-8">
+                                    <div class="flex flex-col gap-4 md:gap-6 items-center" id="col-1"></div>
+                                    <div class="flex flex-col gap-4 md:gap-6 items-center" id="col-2"></div>
+                                </div>
+                                <!-- Right Side (11-20) -->
+                                <div class="flex-1 flex justify-center gap-4 md:gap-8">
+                                    <div class="flex flex-col gap-4 md:gap-6 items-center" id="col-3"></div>
+                                    <div class="flex flex-col gap-4 md:gap-6 items-center" id="col-4"></div>
+                                </div>
+                            </div>
+
+                            <!-- Legend -->
+                            <div class="mt-10 flex flex-wrap justify-center gap-6 text-xs text-stone-500 font-medium border-t border-stone-200 pt-4 mx-4">
+                                <div class="flex items-center gap-2"><span class="w-3 h-3 bg-wedding-rose/20 border border-wedding-rose rounded-full"></span> 主桌 / Main Table</div>
+                                <div class="flex items-center gap-2"><span class="w-3 h-3 bg-wedding-rose rounded-full"></span> 您的座位 / Your Seat</div>
+                                <div class="flex items-center gap-2"><span class="w-3 h-3 bg-white border border-stone-300 rounded-full"></span> 其他桌次 / Other Tables</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="py-20 px-4 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-stone-800 mb-2 tracking-wide">Captured Moments</h2>
+                    <p class="text-stone-400 text-lg tracking-wider">幸福瞬間</p>
+                </div>
+                <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px] grid-flow-dense">
+                    <!-- Gallery Items Injected Here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-stone-900 text-stone-400 py-12 text-center">
+        <div class="flex items-center justify-center gap-2 mb-4 text-wedding-rose">
+            <i data-lucide="heart" class="w-5 h-5 fill-current"></i>
+        </div>
+        <p class="font-script text-3xl text-stone-300 mb-2">Jack & Kensey</p>
+        <p class="text-xs tracking-wider uppercase opacity-60">Thank you for celebrating with us</p>
+        <p class="text-[10px] mt-8 opacity-30">Designed with Love</p>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        /** CONSTANTS & DATA **/
+        const rawGuestList = `
+1	張偉、林靜、王磊、李芳、陳浩、劉婷、黃強、周敏、徐傑、何娜
+2	吳俊、鄭雪、謝明、蔡琳、方宇、潘燕、韓峰、朱麗、孔杰、許婷
+3	魏晨、楊洋、盧欣、侯強、龔蓉、戴磊、范瑋、曹婷、陶勇、羅紅
+4	陸峰、鄒琳、白傑、梁敏、邱偉、馬芳、江浩、沈婷、田宇、龔娜
+5	王凱、張麗、李強、劉洋、陳俊、周芳、黃傑、徐琳、何峰、吳婷
+6	鄭浩、謝婷、蔡偉、方琳、潘傑、韓洋、朱娜、孔宇、許紅、魏芳
+7	楊傑、盧婷、侯宇、龔峰、戴紅、范婷、曹偉、陶琳、羅傑、陸娜
+8	鄒宇、白峰、梁紅、邱婷、馬偉、江琳、沈傑、田娜、王宇、張峰
+9	李紅、劉婷、陳傑、周娜、黃宇、徐峰、何紅、吳婷、鄭傑、謝娜
+10	蔡傑、方婷、潘偉、韓琳、朱傑、孔娜、許宇、魏峰、楊紅、盧婷
+11	侯傑、龔娜、戴宇、范峰、曹紅、陶婷、羅偉、陸琳、鄒傑、白娜
+12	梁宇、邱峰、馬紅、江婷、沈偉、田琳、王傑、張娜、李宇、劉峰
+13	陳紅、周婷、黃偉、徐琳、何傑、吳娜、鄭宇、謝峰、蔡紅、方婷
+14	潘偉、韓琳、朱傑、孔娜、許宇、魏峰、楊紅、盧婷、侯傑、龔娜
+15	戴宇、范峰、曹紅、陶婷、羅偉、陸琳、鄒傑、白娜、梁宇、邱峰
+16	馬紅、江婷、沈偉、田琳、王傑、張娜、李宇、劉峰、陳紅、周婷
+17	黃偉、徐琳、何傑、吳娜、鄭宇、謝峰、蔡紅、方婷、潘偉、韓琳
+18	朱傑、孔娜、許宇、魏峰、楊紅、盧婷、侯傑、龔娜、戴宇、范峰
+19	曹紅、陶婷、羅偉、陸琳、鄒傑、白娜、梁宇、邱峰、馬紅、江婷
+20	沈偉、田琳、王傑、張娜、李宇、劉峰、陳紅、周婷、黃偉、徐琳
+`;
+
+        // Parse Guest Data
+        const TABLES = rawGuestList.trim().split('\n').map(line => {
+            const [numStr, namesStr] = line.split('\t');
+            return {
+                tableNumber: parseInt(numStr, 10),
+                guests: namesStr.split('、').map(n => n.trim())
+            };
+        });
+
+        const ALL_GUESTS = TABLES.flatMap(table => 
+            table.guests.map(name => ({ name, tableNumber: table.tableNumber }))
+        );
+
+        // Gallery Data
+        const GALLERY_PHOTOS = [
+            { id: 1, url: "https://picsum.photos/600/600?random=1", size: "large" },
+            { id: 2, url: "https://picsum.photos/400/400?random=2", size: "small" },
+            { id: 3, url: "https://picsum.photos/400/800?random=3", size: "medium" },
+            { id: 4, url: "https://picsum.photos/400/400?random=4", size: "small" },
+            { id: 5, url: "https://picsum.photos/600/600?random=5", size: "medium" },
+            { id: 6, url: "https://picsum.photos/400/800?random=6", size: "large" },
+            { id: 7, url: "https://picsum.photos/400/400?random=7", size: "small" },
+            { id: 8, url: "https://picsum.photos/400/800?random=8", size: "small" },
+            { id: 9, url: "https://picsum.photos/400/400?random=9", size: "small" },
+            { id: 10, url: "https://picsum.photos/600/600?random=10", size: "medium" },
+            { id: 11, url: "https://picsum.photos/400/400?random=11", size: "large" },
+            { id: 12, url: "https://picsum.photos/400/400?random=12", size: "small" },
+        ];
+
+        /** INITIALIZATION **/
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            initSeatingMap();
+            initSearch();
+            initGallery();
+        });
+
+        /** SEATING MAP LOGIC **/
+        let currentHighlightedTable = null;
+
+        function initSeatingMap() {
+            renderColumn('col-1', [1, 2, 3, 4, 5]);
+            renderColumn('col-2', [6, 7, 8, 9, 10]);
+            renderColumn('col-3', [11, 12, 13, 14, 15]);
+            renderColumn('col-4', [16, 17, 18, 19, 20]);
+        }
+
+        function renderColumn(elementId, tables) {
+            const container = document.getElementById(elementId);
+            container.innerHTML = '';
+            tables.forEach(num => {
+                const el = createTableElement(num);
+                container.appendChild(el);
+            });
+        }
+
+        function createTableElement(tableNum) {
+            const div = document.createElement('div');
+            div.id = `table-${tableNum}`;
+            div.className = `relative w-14 h-14 md:w-14 md:h-14 rounded-full flex items-center justify-center text-sm font-bold border-2 transition-all duration-500 bg-white text-stone-600 border-stone-300`;
+            div.innerHTML = `
+                ${tableNum}
+                <div class="absolute inset-0 rounded-full border-[1px] border-dotted border-stone-300 scale-125 pointer-events-none opacity-50"></div>
+            `;
+            return div;
+        }
+
+        function updateMapHighlight(tableNum) {
+            // Reset previous
+            if (currentHighlightedTable) {
+                const prev = document.getElementById(`table-${currentHighlightedTable}`);
+                if (prev) {
+                    prev.className = `relative w-14 h-14 md:w-14 md:h-14 rounded-full flex items-center justify-center text-sm font-bold border-2 transition-all duration-500 bg-white text-stone-600 border-stone-300`;
+                }
+            }
+            
+            currentHighlightedTable = tableNum;
+
+            // Highlight new
+            if (tableNum) {
+                const curr = document.getElementById(`table-${tableNum}`);
+                if (curr) {
+                    curr.className = `relative w-14 h-14 md:w-14 md:h-14 rounded-full flex items-center justify-center text-sm font-bold border-2 transition-all duration-500 bg-wedding-rose text-white border-wedding-rose scale-125 shadow-[0_0_15px_rgba(230,184,184,0.8)] z-10`;
+                }
+            }
+        }
+
+        /** SEARCH LOGIC **/
+        function initSearch() {
+            const input = document.getElementById('guest-search-input');
+            const resultsContainer = document.getElementById('search-results');
+            const noResults = document.getElementById('no-results');
+            const emptyState = document.getElementById('empty-state');
+            
+            const searchMode = document.getElementById('search-mode');
+            const resultMode = document.getElementById('result-mode');
+            const resetBtn = document.getElementById('reset-search-btn');
+
+            input.addEventListener('input', (e) => {
+                const term = e.target.value.trim();
+                resultsContainer.innerHTML = '';
+                
+                if (!term) {
+                    emptyState.classList.remove('hidden');
+                    noResults.classList.add('hidden');
+                    return;
+                }
+
+                emptyState.classList.add('hidden');
+                const matches = ALL_GUESTS.filter(g => g.name.includes(term)).slice(0, 6);
+
+                if (matches.length === 0) {
+                    noResults.classList.remove('hidden');
+                } else {
+                    noResults.classList.add('hidden');
+                    matches.forEach(guest => {
+                        const li = document.createElement('li');
+                        li.className = "flex items-center justify-between p-3 hover:bg-stone-50 rounded-lg cursor-pointer transition-colors group border-b border-stone-100 last:border-0";
+                        li.innerHTML = `
+                             <div class="flex items-center gap-3">
+                                <div class="bg-stone-200 p-2 rounded-full group-hover:bg-wedding-rose group-hover:text-white transition-colors">
+                                    <i data-lucide="user" class="w-4 h-4"></i>
+                                </div>
+                                <span class="font-medium text-stone-700">${guest.name}</span>
+                            </div>
+                            <span class="text-stone-400 text-xs">Select / 選擇</span>
+                        `;
+                        li.onclick = () => selectGuest(guest);
+                        resultsContainer.appendChild(li);
+                    });
+                    lucide.createIcons();
+                }
+            });
+
+            function selectGuest(guest) {
+                // Switch UI to Result Mode
+                searchMode.classList.add('hidden');
+                resultMode.classList.remove('hidden');
+
+                // Update Text
+                document.getElementById('result-table-circle').textContent = guest.tableNumber;
+                document.getElementById('result-table-title').textContent = `Table ${guest.tableNumber}`;
+                document.getElementById('result-table-subtitle').textContent = `第 ${guest.tableNumber} 桌`;
+                document.getElementById('result-guest-name').textContent = `Welcome, ${guest.name}`;
+
+                // Update Map
+                updateMapHighlight(guest.tableNumber);
+            }
+
+            resetBtn.addEventListener('click', () => {
+                resultMode.classList.add('hidden');
+                searchMode.classList.remove('hidden');
+                input.value = '';
+                resultsContainer.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                updateMapHighlight(null);
+            });
+        }
+
+        /** GALLERY LOGIC **/
+        function initGallery() {
+            const container = document.getElementById('gallery-grid');
+            GALLERY_PHOTOS.forEach(photo => {
+                const div = document.createElement('div');
+                let spans = "";
+                if (photo.size === 'large') spans = "col-span-2 row-span-2";
+                else if (photo.size === 'medium') spans = "col-span-1 row-span-2";
+                else spans = "col-span-1 row-span-1";
+
+                div.className = `relative group overflow-hidden rounded-lg shadow-sm transition-all hover:shadow-xl cursor-pointer ${spans}`;
+                
+                div.innerHTML = `
+                    <img src="${photo.url}" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" loading="lazy">
+                    <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"></div>
+                `;
+                container.appendChild(div);
+            });
+        }
+    </script>
+</body>
+</html>
