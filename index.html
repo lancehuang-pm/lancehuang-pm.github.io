@@ -92,6 +92,29 @@
                         Please join us to celebrate our special day.
                     </p>
                 </div>
+
+                <div id="ceremony-section" class="hidden mb-16 animate-fade-in">
+                    <div class="max-w-3xl mx-auto bg-white border-2 border-wedding-gold/30 rounded-xl p-8 md:p-10 relative overflow-hidden shadow-lg text-center">
+                        <div class="absolute top-0 left-0 w-20 h-20 border-t-4 border-l-4 border-wedding-gold/40 rounded-tl-xl"></div>
+                        <div class="absolute bottom-0 right-0 w-20 h-20 border-b-4 border-r-4 border-wedding-gold/40 rounded-br-xl"></div>
+        
+                        <div class="text-wedding-gold mb-4"><i data-lucide="gem" class="w-8 h-8 mx-auto"></i></div>
+                        <h3 class="text-2xl font-bold text-stone-800 mb-2 tracking-widest">證婚儀式</h3>
+                        <p class="text-wedding-gold font-script text-2xl mb-6">Wedding Ceremony</p>
+                        
+                        <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 text-stone-600">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="clock" class="w-5 h-5 text-wedding-gold"></i>
+                                <span class="font-medium text-lg">10:00 儀式開始 / Ceremony Begins</span>
+                            </div>
+                            <div class="hidden md:block w-px h-8 bg-stone-200"></div>
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-wedding-gold"></i>
+                                <span class="font-medium text-lg">漢來戶外證婚庭園 (6F)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
                     <!-- Date -->
@@ -294,7 +317,22 @@
             initSeatingMap();
             initSearch();
             initGallery();
+            // 檢查網址參數，決定是否顯示證婚區塊
+            checkCeremonyAccess();
         });
+
+        /** NEW: CEREMONY ACCESS LOGIC **/
+        function checkCeremonyAccess() {
+            // 取得網址上的參數
+            const params = new URLSearchParams(window.location.search);
+            // 檢查是否有 inv=ceremony
+            if (params.get('inv') === 'ceremony') {
+                const section = document.getElementById('ceremony-section');
+                if (section) {
+                    section.classList.remove('hidden');
+                }
+            }
+        }
 
         /** SEATING MAP LOGIC **/
         let currentHighlightedTable = null;
